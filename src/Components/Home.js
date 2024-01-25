@@ -8,21 +8,23 @@ const Home = () => {
     const [ postsData , setPosts ] = useState([])
 
   const getTrending= async () => {
-    await fetch("../db.json").then(res => res.json())
+    await fetch("http://localhost:5000/trending")
+    .then(res => res.json())
     .then(res => {
-      console.log(res)
-      if(res.trending){
-        setPosts(res.trending)
+      if(res){
+        console.log(typeof(res))
+        setPosts(res)
       }
+      console.log("posr"+postsData)
     }).catch(err=>console.log(err))
   }
 
   const getPosts= async () => {
-    await fetch("../db.json").then(res => res.json())
+    await fetch("http://localhost:5000/posts").then(res => res.json())
     .then(res => {
       console.log(res)
-      if(res.posts){
-        setPosts(res.posts)
+      if(res){
+        setPosts(res)
       }
     })
   }
@@ -31,9 +33,11 @@ const Home = () => {
     const location = useLocation()
     console.log(location.pathname)
   if(location.pathname==="/"){
-    getTrending()
+    if(postsData == "")
+        getTrending()
   }else if(location.pathname === '/posts'){
-    getPosts()
+    if(postsData == "")
+        getPosts()
   }
     console.log(screewidth)
     return(
@@ -42,7 +46,7 @@ const Home = () => {
         <table className="home">
         <tr>
             <td id="posts">
-                <Posts data={postsData}/>
+                <Posts heading={location.pathname==="/"?"Trending":"Posts"} data={postsData}/>
             </td>
             <td id="finder">
                 <Finder />

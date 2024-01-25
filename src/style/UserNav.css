@@ -1,4 +1,98 @@
-.usernav {
+/* .usernav {
+    height: 100%;
+    min-width: 60px;
+    min-height: 55vh;
+    width: 5vw;
+    max-width: 5vw;
+    box-shadow: 0 0 10px rgb(46, 44, 44);
+    background-color: white;
+    /* background-image: url('../assests/scroll.jpeg'); }*/
+
+.usernav{
+  position: relative;
+  width: 8vw;
+  min-width: 6em;
+  overflow-y: visible;
+  overflow-x: visible;
+  padding: 0;
+  height: fit-content;
+  transform: skewY(-5deg);
+  transition: 0.5s;
+  left: 12px;
+}
+
+.usernav::after{
+  content: '';
+  position: absolute;
+  z-index: 11;
+  left: 0;
+  transform-origin: bottom;
+  width: 100%;
+  height: 20px;
+  background-color: #34353a;
+  transform: skewX(45deg);
+  filter: blur(10px);
+  box-shadow: 0 0 50px #34353a, 0 0 50px #34353a,0 0 50px #34353a,0 0 50px #34353a;
+}
+
+.usernav li{
+  position: relative;
+  font-size: 11px;
+  overflow-y: visible;
+  list-style: none;
+  width: 100%;
+  background: #3e3f46;
+  padding:15px  5px;
+  z-index: var(--i);
+  transition: 0.5s;
+}
+.usernav li:hover{
+  background: #33a3ee;
+  transform: translateX(-25px);
+}
+
+.usernav li::before{
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background-color: #3e3f46;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+.usernav li::after{
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #34353a;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+
+}
+
+.usernav li a{
+  text-decoration: none;
+  color: #999;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition:0.5s;
+}
+
+.usernav li a:hover{
+  color: #fff;
+}
+
+
+
+/* .usernav {
     height: 100%;
     min-width: 60px;
     top: -5vh;
@@ -14,9 +108,9 @@
     max-width: 5vw;
     box-shadow: 0 0 10px rgb(46, 44, 44);
     background-color: white;
-    /* background-image: url('../assests/scroll.jpeg'); */
-}
-
+    /* background-image: url('../assests/scroll.jpeg'); 
+} */
+/* 
 .cube{
   margin: 15px 0;
   position: relative;
@@ -40,8 +134,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  overflow-x: visible;
-  overflow-y: visible;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -80,7 +172,7 @@
   filter: blur(10px);
   box-shadow: 0 0 20px #f5cd4a, 0 0 20px #f5cd4a;
   transform: rotateX(90deg) translateZ(-20px);
-}
+} */
 
 @media(max-width:900px){
   .usernav{

@@ -7,7 +7,9 @@ const User = () => {
                 <div className="profilephoto avatar"><h3>PP</h3></div>
                 <div className="profileusername username" ><h2>Priyanshu Pandey</h2></div>
             </div>
-            <Posts />
+            <div className="activites">
+                <Posts heading="Activity" data={[]}/>
+            </div>
         </div>
 )}
 export default User;

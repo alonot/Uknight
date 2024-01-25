@@ -1,14 +1,17 @@
 import PostCard from "./PostCard";
 import "../style/Post.css"
-const Posts = ({ data}) => { 
+const Posts = ({heading, data}) => { 
+    console.log(data)
     return(
         <div className="postCard bordered">
-            <h4>Trending</h4>
-            {
-                data.forEach(post => (
-                    <PostCard data={post} />
+            <h4>{heading}</h4>
+            <>{
+                
+                data.map((post) => (
+                    (<PostCard data={post} />)
                 ))
             }
+             </>
             <button className="bordered">See All</button>
         </div>
 )}

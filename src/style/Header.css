@@ -16,6 +16,8 @@ header{
     align-items: center;
     display: flex;
     max-height: 5em;
+    position: fixed;
+    z-index: 2;
     min-width: 100vw;
 }
 #navbar span,#navbar section{
@@ -56,6 +58,8 @@ header{
 #belownav{
     min-height: 10em;
     display: flex;
+    top: 5em;
+    position: relative;
     width: 100vw;
     align-items: center;
     justify-content: center;
@@ -81,6 +85,7 @@ header{
     }
     #belownav{
         min-height: 8em;
+        top: 3.5em;
     }
     .items{
         margin: 0 0.5em;

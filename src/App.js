@@ -33,7 +33,7 @@ function App() {
           }
           </>
         )} />
-        <Route path='/user' exact Component={()=>(
+        <Route path='/posts' exact Component={()=>(
           <>
           {(screewidth > 900)?
             <div className='Mainarena'>

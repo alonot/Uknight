@@ -1,0 +1,33 @@
+.UserPage{
+    min-width: 100vw;
+    min-height: 70vh;
+}
+
+.UserInfo{
+    width: 100vw;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    top: -20px;
+    position: relative;
+    flex-direction: column;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+}
+
+.avatar h3{
+    font-size: 3em;
+}
+
+.username h2{
+    margin: 0;
+    height: fit-content;
+}
+
+.username{
+    position: relative;
+    top: -20px;
+}

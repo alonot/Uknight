@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+.App {
+  text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.142); */
+  /* background-image: url('./assests/back2.jpg') */
+  
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.Mainarena{
+  min-height: 70vh;
+  min-width: 1100px;
+  display: flex;
+  overflow-x: visible;
+  background-color: rgba(0, 0, 0, 0.038);
+}
+
+* {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+@media(max-width:900px){
+   .Mainarena{
+    min-width: 0;
+    display: block;
+    width: 100vw;
+   }
+}
+
+

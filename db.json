@@ -1,0 +1,46 @@
+{
+    "trending":[
+        {
+            "profilephototxt":"PP",
+            "username":"Priyanshu Pandey",
+            "content":" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything. There are many variations of passages of Lorem Ipsum availabl. There are many variations of passages of Lorem Ipsum availabl.....",
+            "likes":400,
+            "dislikes":120,
+            "comments":20
+        },
+        {
+            "profilephototxt":"SS",
+            "username":"Sarthak Garg",
+            "content":" There are Few variations of passages of Lorem Ipsum available, but the majority have suffered alteration  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything. There are many variations of passages of Lorem Ipsum availabl. There are many variations of passages of Lorem Ipsum availabl.....",
+            "likes":800,
+            "dislikes":80,
+            "comments":40
+        }
+    ],
+    "posts":[
+        {
+            "profilephototxt":"PP",
+            "username":"Priyanshu Pandey",
+            "content":" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything. There are many variations of passages of Lorem Ipsum availabl. There are many variations of passages of Lorem Ipsum availabl.....",
+            "likes":400,
+            "dislikes":120,
+            "comments":20
+        },
+        {
+            "profilephototxt":"SS",
+            "username":"Sarthak Garg",
+            "content":" There are Few variations of passages of Lorem Ipsum available, but the majority have suffered alteration  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything. There are many variations of passages of Lorem Ipsum availabl. There are many variations of passages of Lorem Ipsum availabl.....",
+            "likes":800,
+            "dislikes":80,
+            "comments":40
+        },
+        {
+            "profilephototxt":"HP",
+            "username":"Himanshu Pro",
+            "content":" There were Few variations of passages of Lorem Ipsum available, but the majority have suffered alteration  If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything. There are many variations of passages of Lorem Ipsum availabl. There are many variations of passages of Lorem Ipsum availabl.....",
+            "likes":1600,
+            "dislikes":40,
+            "comments":100
+        }
+    ]
+}

@@ -7,6 +7,10 @@ const Header = () => {
         currentPage = "User"
     else if (location.pathname === "/about")
         currentPage = "About"
+    else if (location.pathname === "/posts")
+        currentPage = "Posts"
+    else if (location.pathname === "/post")
+        currentPage = "Post"
 
     return (
         <header>

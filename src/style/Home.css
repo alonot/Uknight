@@ -2,7 +2,7 @@
     min-height: 70vh;
     width: 92vw;
     max-width: 92vw;
-    padding: 3em 5em;
+    padding: 3em 4%;
 }
 
 #posts{
@@ -18,10 +18,9 @@
     padding: 10px 1em;
 }
 
-@media(max-width:900px){
+@media(max-width:1000px){
     .home{
         padding: 0 0.2em;
-        top: -10px;
         position: relative;
         width: 100vw;
         max-width: 100vw;

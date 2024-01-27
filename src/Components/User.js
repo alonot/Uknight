@@ -1,15 +1,39 @@
 import "../style/User.css"
+import { useEffect, useState } from "react";
 import Posts from "./Posts";
-const User = () => { 
+import { useNavigate } from "react-router-dom";
+const User = ({getauthor,currentUser,getpost,handleClick,setCurrUser}) => { 
+    const [ Loading , setLoading ] = useState(true)
+    const [allposts,setallposts] = useState({})
+    const navigate = useNavigate()
+    useEffect(()=>{
+        let posts={}
+        setLoading(true)
+        console.log()
+        if(currentUser.posts==undefined){
+            navigate("/")
+        }else{
+        for(let i=0; i<currentUser.posts.length;i++){
+            posts[currentUser.posts[i]]=getpost(currentUser.posts[i])
+        }
+        setallposts(posts)
+    }
+        setLoading(false)
+    },[])
     return(
-        <div className="UserPage">
+        <>
+        {!Loading &&
+            <div className="UserPage">
             <div className="UserInfo">
-                <div className="profilephoto avatar"><h3>PP</h3></div>
-                <div className="profileusername username" ><h2>Priyanshu Pandey</h2></div>
+                <div className="profilephoto avatar"><h3>{currentUser.profilephototxt}</h3></div>
+                <div className="profileusername username" ><h2>{currentUser.name}</h2></div>
             </div>
+
             <div className="activites">
-                <Posts heading="Activity" data={[]}/>
+                <Posts heading="Activity" canClickUser={false} getauthor={getauthor} data={allposts} handleClick={handleClick} setCurrUser={setCurrUser}/>
             </div>
         </div>
+        }
+        </>
 )}
 export default User;

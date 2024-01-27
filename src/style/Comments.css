@@ -1,0 +1,26 @@
+.commentBox{
+    width: 90%;
+    display: flex;
+    margin: 5px 4em;
+    margin: 0;
+}
+
+.pfphotoComm{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.pfphotoComm:hover{
+    text-decoration: underline;
+}
+
+.commmsgbox{
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    padding: 0;
+}
+
+.commmsgbox p{
+    margin: 0 10px;
+}

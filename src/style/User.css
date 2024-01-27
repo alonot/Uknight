@@ -5,10 +5,9 @@
 
 .UserInfo{
     width: 100vw;
-    min-height: 20vh;
+    min-height: 25vh;
     display: flex;
     align-items: center;
-    top: -20px;
     position: relative;
     flex-direction: column;
 }
@@ -23,14 +22,11 @@
 }
 
 .username h2{
-    margin: 0;
     height: fit-content;
+
+    position: relative;
 }
 
-.username{
-    position: relative;
-    top: -20px;
-}
 
 .activites{
     margin: 0 20px;

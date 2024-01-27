@@ -1,12 +1,26 @@
+import { useEffect } from "react";
 import "../style/UserNav.css"
-const UserNav = () => { 
+import { useNavigate } from "react-router-dom";
+const UserNav = ({data,handleClick}) => {
+    const navigate =useNavigate() 
+    // console.log(Object.values(data))
+    const clicked=(id)=>{
+        handleClick(id)
+    }
+    useEffect(()=>{
+        if(Object.keys(data)==0){
+            navigate("/")
+        }
+    })
     return(
         <ul className="usernav">
-                <li><a href="#">Priyanshu</a></li>
-                <li><a href="#">Sarthak</a></li>
-                <li><a href="#">Himanshu</a></li>
-                <li><a href="#">Hemant</a></li>
-                <li><a href="#">Akshay</a></li>
+                {
+                    Object.keys(data).map(key =>(
+                        <li key={key}><p onClick={()=>{
+                            clicked(key)
+                        }}>{data[key].name.split(' ')[0]}</p></li>
+                    ))
+                }
             </ul>
 )}
 export default UserNav;

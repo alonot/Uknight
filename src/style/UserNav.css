@@ -4,11 +4,10 @@
   min-width: 6em;
   overflow-y: visible;
   left: 5px;
-  overflow-x: visible;
   padding: 0;
   height: fit-content;
   padding: 3px;
-  transition: 0.5s;
+  cursor: pointer;
   box-shadow: inset 0 0 3px #999;
 }
 
@@ -16,7 +15,6 @@
 .usernav li{
   position: relative;
   font-size: 11px;
-  overflow-y: visible;
   list-style: none;
   width: 100%;
   padding:15px  5px;
@@ -28,17 +26,18 @@
   transform: translateX(-25px);
 }
 
-.usernav li a{
+.usernav li p{
   text-decoration: none;
   color: #999;
   display: block;
+  margin: 0;
   overflow-y: visible;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition:0.5s;
 }
 
-.usernav li a:hover{
+.usernav li p:hover{
   color: #fff;
 }
 
@@ -64,8 +63,6 @@
   }
   .usernav li:hover{
     transform: translateY(25px);
-    z-index: 3;
-    scale: 100;
     background-color: #33a3ee;
   }
 }

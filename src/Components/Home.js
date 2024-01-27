@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 const Home = ({postData, getauthor, handleClick , setCurrUser}) => {
   const screewidth = document.documentElement.clientWidth
   const location = useLocation()
-  console.log(postData)
+  // console.log(postData)
   if (location.pathname === "/") {
     // setToshowposts(trending)
   } else if (location.pathname === '/posts') {
@@ -18,6 +18,7 @@ const Home = ({postData, getauthor, handleClick , setCurrUser}) => {
     <>
       {(screewidth > 1000) ?
         <table className="home">
+          <tbody>
           <tr>
             <td id="posts">
               <Posts heading={location.pathname === "/" ? "Trending" : "Posts"} data={postData} canClickUser={true} getauthor={getauthor} handleClick={handleClick} setCurrUser={setCurrUser}/>
@@ -26,6 +27,7 @@ const Home = ({postData, getauthor, handleClick , setCurrUser}) => {
               <Finder />
             </td>
           </tr>
+          </tbody>
         </table> :
 
         <div className="home">

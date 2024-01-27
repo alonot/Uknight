@@ -138,11 +138,11 @@ function App() {
               {(screewidth > 1000) ?
                 <div className='Mainarena'>
                   <Home postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} />
-                  <UserNav />
+                  <UserNav data={Allauthors} handleClick={setCurrUser}/>
                 </div>
                 :
                 <div className='Mainarena'>
-                  <UserNav />
+                  <UserNav data={Allauthors} handleClick={setCurrUser}/>
                   <Home postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} />
                 </div>
               }
@@ -153,11 +153,11 @@ function App() {
               {(screewidth > 1000) ?
                 <div className='Mainarena'>
                   <Home canClickUser={true} postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} />
-                  <UserNav />
+                  <UserNav data={Allauthors} handleClick={setCurrUser}/>
                 </div>
                 :
                 <div className='Mainarena'>
-                  <UserNav />
+                  <UserNav data={Allauthors} handleClick={setCurrUser}/>
                   <Home canClickUser={true} postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} />
                 </div>
               }

@@ -18,6 +18,7 @@
 .Mainarena{
   display: flex;
   overflow-x: visible;
+  transition: all 0.5s;
   overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.038);
 }

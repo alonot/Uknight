@@ -165,12 +165,12 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <div className='cursor' id='cursorId' ></div>
         {!Loading &&
           <>
             <Routes>
               <Route path='/' exact Component={() => (
                 <>
+                <div className='cursor' id='cursorId' ></div>
                   {(screewidth > 1000) ?
                     <div className='Mainarena'>
                       <Home postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} getTrending={gettrending} getauthorbyName={getauthorbyName}/>
@@ -187,6 +187,7 @@ function App() {
               )} />
               <Route path='/posts' exact Component={() => (
                 <>
+                <div className='cursor' id='cursorId' ></div>
                   {(screewidth > 1000) ?
                     <div className='Mainarena'>
                       <Home canClickUser={true} postData={Allposts} getauthor={getauthor} handleClick={setpostData} getTrending={gettrending} setCurrUser={setCurrUser} getauthorbyName={getauthorbyName}/>
@@ -203,6 +204,7 @@ function App() {
               )} />
               <Route path='/user' Component={() => (
                 <>
+                  <div className='cursor' id='cursorId' ></div>
                   <User getauthor={getauthor} currentUser={currentUser} getpost={getpost} handleClick={setpostData} setCurrUser={setCurrUser} />
                   <Footer />
                 </>

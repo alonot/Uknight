@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { BASE_URL,ABOUT } from "../util";
 
+/**
+ * 
+ * ### About Us component
+ */
 const About = () => { 
     const [aboutUs,setAboutUs] = useState("")
     useEffect(()=>{

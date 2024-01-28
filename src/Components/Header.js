@@ -1,5 +1,10 @@
 import "../style/Header.css";
 import { Link, useLocation } from "react-router-dom";
+
+
+/** 
+    Fixed Header component
+*/
 const Header = () => {
     let currentPage = "Home"
     let location = useLocation()
@@ -20,6 +25,7 @@ const Header = () => {
                         <span>
                             <h1 id="U">U</h1>
                             <h1 id="knight">KNIGHT</h1>
+                            <div id="knightLogo"  alt="w"></div>
                         </span>
                     </Link>
                 </section>

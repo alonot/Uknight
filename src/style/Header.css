@@ -25,7 +25,16 @@ header{
     text-transform: uppercase;
     font-weight: bold;
     margin-left: 2em;
+    align-items: center;
     font-size: 20px;
+}
+#knightLogo{
+    background-image: url('../assests/knight.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
 }
 #U{
     color: #0288D1;
@@ -84,6 +93,10 @@ header{
         font-size: small;
         min-height: 10em;
         min-width: 310px;
+    }
+    #knightLogo{
+        width: 30px;
+        height: 30px;
     }
     #belownav{
         font-size: small;

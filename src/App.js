@@ -147,7 +147,12 @@ function App() {
 
   useEffect(() => {
     getAllposts()
+    const cursor=document.getElementById('cursorId')
 
+    window.onmousemove=function(e){
+      cursor.style.top=(e.clientY-50)+'px'
+      cursor.style.left = (e.clientX - 50)+ 'px '
+    }
   }, [])
 
 
@@ -160,6 +165,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
+        <div className='cursor' id='cursorId' ></div>
         {!Loading &&
           <>
             <Routes>

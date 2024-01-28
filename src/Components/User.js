@@ -2,6 +2,16 @@ import "../style/User.css"
 import { useEffect, useState } from "react";
 import Posts from "./Posts";
 import { useNavigate } from "react-router-dom";
+
+/** 
+    Single User Component
+  getauthor: returns author object matching that id
+  getpost: returns post object matching that id
+  setCurrUser: sets the user to be displayed at /user page 
+  handleClick: handles the click event on the post
+  currentUser: content to be shown
+*/
+
 const User = ({getauthor,currentUser,getpost,handleClick,setCurrUser}) => { 
     const [ Loading , setLoading ] = useState(true)
     const [allposts,setallposts] = useState({})

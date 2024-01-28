@@ -1,4 +1,7 @@
 import "../style/Footer.css";
+/** 
+    Footer Component
+    */
 const Footer = () => { 
     return(
         <footer>

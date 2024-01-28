@@ -33,3 +33,19 @@
     padding: 5px 20px;
     padding-bottom: 10px;
 }
+
+
+@media(max-width:450px){
+    .activites{
+        padding: 5px 5px;
+        margin: 0 10px;
+    }
+    .profileusername p{
+        margin: 10px 0;
+        font-size: 12px;
+        height: fit-content;
+    }
+    .messagebox p{
+        font-size: 9px;
+    }
+}

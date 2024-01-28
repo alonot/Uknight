@@ -49,6 +49,7 @@
     width: 90%;
     margin-left: 20px;
     padding-top: 10px;
+    overflow: hidden;
     /* To get the above border */
     box-shadow: 0 11px 2px -10px #c9c6c6 inset;
     /* border-top:  #d0d0d0 1px solid; */
@@ -247,6 +248,9 @@ a:hover{
         margin: 0;
         font-size: small;
     }
+    .commentSection{
+        padding: 5px 10px;
+    }
     .postcont{
         min-height: 55vh;
         max-height: 100vh;
@@ -288,6 +292,9 @@ a:hover{
     }
     .profileusername a{
         padding: 10px 0;
+    }
+    .username{
+        height: 30px;
     }
     .boxpost{
         max-lines: 100;

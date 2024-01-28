@@ -1,6 +1,12 @@
 import { useEffect } from "react";
 import "../style/UserNav.css"
 import { useNavigate } from "react-router-dom";
+
+/** 
+    Side Navigation meu on Home page
+    Data : the incoming content
+  handleClick: handles the click event on the post
+*/
 const UserNav = ({data,handleClick}) => {
     const navigate =useNavigate() 
     // console.log(Object.values(data))

@@ -3,6 +3,13 @@ import { useNavigate } from "react-router-dom";
 import Comment from "./Comments";
 import { BASE_URL,COMMENTS } from "../util";
 
+/** 
+    Single Post Component
+     Data : the incoming content
+  getauthor: returns author object matching that id
+  setCurrUser: sets the user to be displayed at /user page 
+*/
+
 const Post = ({setCurrUser, data ,getauthor}) => {
     const [ Loading , setLoading ] = useState(true)
     const [postdata, setpostData] = useState({})
@@ -81,7 +88,7 @@ const Post = ({setCurrUser, data ,getauthor}) => {
                         <>
                         {
                             comments.map(comment =>(
-                                <Comment key={comment.author_id} data={comment} getauthor={getauthor}/>
+                                <Comment key={comment.author_id} data={comment} getauthor={getauthor} setUser={setCurrUser}/>
                             ))
                         }
                         </>:

@@ -2,6 +2,7 @@
     min-height: 70vh;
     width: 92vw;
     max-width: 92vw;
+    overflow-x: hidden;
     padding: 3em 4%;
 }
 

@@ -1,6 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "../style/Finder.css"
 
+/*  
+    A finder Component to search for a particular user
+    getauthorbyId: returns author object matching that id
+    getauthorbyName: returns author object matching that name
+    setauthor: sets the user/author to be displayed at /user page 
+*/
 const Finder = ({ getauthorbyId, setauthor, getauthorbyName }) => {
     const navigate = useNavigate()
     const submitForm = (e) => {

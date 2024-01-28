@@ -1,6 +1,14 @@
 import { useNavigate } from "react-router-dom"
 import "../style/Post.css"
 
+/** 
+    A Single PostCard which contains minimal info about the post
+     Data : the incoming content
+  getauthor: returns author object matching that id
+  setCurrUser: sets the user to be displayed at /user page 
+  handleClick: handles the click event on the post --> mainly sets the post to be shown at /post
+  canClickUser: true or false -> whether userinfo is clickable or not
+*/
 const PostCard = ({data, getauthor , handleClick, setCurrUser,canClickUser}) => {
     const navigate = useNavigate()
     // console.log(data)

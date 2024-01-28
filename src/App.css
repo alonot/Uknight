@@ -21,7 +21,7 @@
   height: 200px;
   position: fixed;
   z-index: -1;
-  background: linear-gradient(#fff,#fb0404);
+  background:rgb(51, 184, 51);
   animation: animate linear 5s infinite;
 }
 

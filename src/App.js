@@ -29,10 +29,10 @@ function App() {
     setcurrentUser(author)
   }
 
-  const getauthorbyName = (author_name) =>{
-    const pattern = new RegExp(`${author_name}.*`,'i')
-    for(var key in Allauthors){
-      if(pattern.test(Allauthors[key].name)){
+  const getauthorbyName = (author_name) => {
+    const pattern = new RegExp(`${author_name}.*`, 'i')
+    for (var key in Allauthors) {
+      if (pattern.test(Allauthors[key].name)) {
         return key
       }
     }
@@ -43,22 +43,22 @@ function App() {
 
   const gettrending = () => {
     setLoading(true)
-    let trending=[]
-    const data=Object.values(Allposts)
-    for(let i=0;i<5;i++){
-      var max=i
-      for(let j=i;j<data.length;j++){
-        if(data[j].likes > data[max].likes ){
-          max=j
-        }else if(data[j].likes === data[max].likes){
-          if(data[j].dislikes < data[max].dislikes){
-            max=j
+    let trending = []
+    const data = Object.values(Allposts)
+    for (let i = 0; i < 5; i++) {
+      var max = i
+      for (let j = i; j < data.length; j++) {
+        if (data[j].likes > data[max].likes) {
+          max = j
+        } else if (data[j].likes === data[max].likes) {
+          if (data[j].dislikes < data[max].dislikes) {
+            max = j
           }
         }
       }
-      var temp=data[max]
-      data[max]=data[i]
-      data[i]=temp
+      var temp = data[max]
+      data[max] = data[i]
+      data[i] = temp
       trending.push(data[i])
     }
     setLoading(false)
@@ -80,7 +80,7 @@ function App() {
       .then(async () => {
         // console.log("piii")
       })
-    .catch(err => console.log(err))
+      .catch(err => console.log(err))
   }
   let y = 0
   //to use /posts and then /post
@@ -118,7 +118,7 @@ function App() {
         setLoading(false)
       })
 
-    .catch(err => console.log(err))
+      .catch(err => console.log(err))
   }
 
   const getauthors = async (post) => {
@@ -141,20 +141,22 @@ function App() {
         }
         authors[post.author_id] = { "name": res.name, "profilephototxt": profilephototxt, "posts": [post.id] }
       })
-    .catch(err => console.log(err))
+      .catch(err => console.log(err))
   }
-
 
   useEffect(() => {
     getAllposts()
-    const cursor=document.getElementById('cursorId')
-
-    window.onmousemove=function(e){
-      cursor.style.top=(e.clientY-50)+'px'
-      cursor.style.left = (e.clientX - 50)+ 'px '
+    const cursor = document.getElementById('cursorId')
+    window.onmousemove = function (e) {
+      if (!window.location.href.endsWith('/post')) {
+        cursor.style.display='block'
+        cursor.style.top = (e.clientY - 50) + 'px'
+        cursor.style.left = (e.clientX - 50) + 'px '
+      }else{
+        cursor.style.display='none'
+      }
     }
   }, [])
-
 
   const screewidth = document.documentElement.clientWidth
   const setpostData = (data) => {
@@ -164,22 +166,22 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <div className='cursor' id='cursorId'></div>
         <Header />
         {!Loading &&
           <>
             <Routes>
               <Route path='/' exact Component={() => (
                 <>
-                <div className='cursor' id='cursorId' ></div>
                   {(screewidth > 1000) ?
                     <div className='Mainarena'>
-                      <Home postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} getTrending={gettrending} getauthorbyName={getauthorbyName}/>
+                      <Home postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} getTrending={gettrending} getauthorbyName={getauthorbyName} />
                       <UserNav data={Allauthors} handleClick={setCurrUser} />
                     </div>
                     :
                     <div className='Mainarena'>
                       <UserNav data={Allauthors} handleClick={setCurrUser} />
-                      <Home postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} getTrending={gettrending} getauthorbyName={getauthorbyName}/>
+                      <Home postData={Allposts} getauthor={getauthor} handleClick={setpostData} setCurrUser={setCurrUser} getTrending={gettrending} getauthorbyName={getauthorbyName} />
                     </div>
                   }
                   <Footer />
@@ -187,16 +189,15 @@ function App() {
               )} />
               <Route path='/posts' exact Component={() => (
                 <>
-                <div className='cursor' id='cursorId' ></div>
                   {(screewidth > 1000) ?
                     <div className='Mainarena'>
-                      <Home canClickUser={true} postData={Allposts} getauthor={getauthor} handleClick={setpostData} getTrending={gettrending} setCurrUser={setCurrUser} getauthorbyName={getauthorbyName}/>
+                      <Home canClickUser={true} postData={Allposts} getauthor={getauthor} handleClick={setpostData} getTrending={gettrending} setCurrUser={setCurrUser} getauthorbyName={getauthorbyName} />
                       <UserNav data={Allauthors} handleClick={setCurrUser} />
                     </div>
                     :
                     <div className='Mainarena'>
                       <UserNav data={Allauthors} handleClick={setCurrUser} />
-                      <Home canClickUser={true} postData={Allposts} getauthor={getauthor} handleClick={setpostData} getTrending={gettrending} setCurrUser={setCurrUser} getauthorbyName={getauthorbyName}/>
+                      <Home canClickUser={true} postData={Allposts} getauthor={getauthor} handleClick={setpostData} getTrending={gettrending} setCurrUser={setCurrUser} getauthorbyName={getauthorbyName} />
                     </div>
                   }
                   <Footer />
@@ -204,7 +205,6 @@ function App() {
               )} />
               <Route path='/user' Component={() => (
                 <>
-                  <div className='cursor' id='cursorId' ></div>
                   <User getauthor={getauthor} currentUser={currentUser} getpost={getpost} handleClick={setpostData} setCurrUser={setCurrUser} />
                   <Footer />
                 </>

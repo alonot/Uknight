@@ -28,7 +28,7 @@ const PostCard = ({data, getauthor , handleClick, setCurrUser,canClickUser}) => 
                     <div className="name profileusername" onClick={click}>{data.name}</div>
                 </div>
                 <div className="messagebox" onClick={click}>
-                    <p>{data.body}</p>
+                    <p>{data.body.substring(0,180)+"........."}</p>
                 </div>
                 <div className="bottombar">
                     <span className="spbuttons">

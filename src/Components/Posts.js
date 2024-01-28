@@ -6,7 +6,7 @@ const Posts = ({heading, data,getauthor, handleClick, setCurrUser,canClickUser})
         <div className="postCard bordered">
             <h4>{heading}</h4>
             <>{
-                Object.values(data).map((post) => {
+                data.map((post) => {
                     return (<PostCard key={post.id} canClickUser={canClickUser} data={post} getauthor={getauthor} handleClick={handleClick} setCurrUser={setCurrUser}/>)
             })
             }

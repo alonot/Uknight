@@ -10,7 +10,7 @@ const User = ({getauthor,currentUser,getpost,handleClick,setCurrUser}) => {
         let posts={}
         setLoading(true)
         console.log()
-        if(currentUser.posts==undefined){
+        if(currentUser.posts===undefined){
             navigate("/")
         }else{
         for(let i=0; i<currentUser.posts.length;i++){
@@ -30,7 +30,7 @@ const User = ({getauthor,currentUser,getpost,handleClick,setCurrUser}) => {
             </div>
 
             <div className="activites">
-                <Posts heading="Activity" canClickUser={false} getauthor={getauthor} data={allposts} handleClick={handleClick} setCurrUser={setCurrUser}/>
+                <Posts heading="Activity" canClickUser={false} getauthor={getauthor} data={Object.values(allposts)} handleClick={handleClick} setCurrUser={setCurrUser}/>
             </div>
         </div>
         }

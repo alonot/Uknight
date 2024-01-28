@@ -6,9 +6,10 @@ const UserNav = ({data,handleClick}) => {
     // console.log(Object.values(data))
     const clicked=(id)=>{
         handleClick(id)
+        navigate('/user')
     }
     useEffect(()=>{
-        if(Object.keys(data)==0){
+        if(Object.keys(data)===0){
             navigate("/")
         }
     })
@@ -16,9 +17,9 @@ const UserNav = ({data,handleClick}) => {
         <ul className="usernav">
                 {
                     Object.keys(data).map(key =>(
-                        <li key={key}><p onClick={()=>{
+                        <li key={key} onClick={()=>{
                             clicked(key)
-                        }}>{data[key].name.split(' ')[0]}</p></li>
+                        }}><p >{data[key].name.split(' ')[0]}</p></li>
                     ))
                 }
             </ul>

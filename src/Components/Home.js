@@ -53,7 +53,7 @@ const Home = ({postData, getauthor, handleClick , setCurrUser, getauthorbyName ,
             <Posts heading={location.pathname === "/" ? "Trending" : "Posts"} data={data} canClickUser={true} getauthor={getauthor} handleClick={handleClick} setCurrUser={setCurrUser} />
           </div>
           <div id="finder">
-            <Finder getauthorbyId={getauthor} setauthor={setCurrUser}/>
+            <Finder getauthorbyId={getauthor} setauthor={setCurrUser}  getauthorbyName={getauthorbyName}/>
           </div>
         </div>
 

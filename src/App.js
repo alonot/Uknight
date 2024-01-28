@@ -30,7 +30,7 @@ function App() {
   }
 
   const getauthorbyName = (author_name) =>{
-    const pattern = new RegExp(`${author_name}.*`)
+    const pattern = new RegExp(`${author_name}.*`,'i')
     for(var key in Allauthors){
       if(pattern.test(Allauthors[key].name)){
         return key
